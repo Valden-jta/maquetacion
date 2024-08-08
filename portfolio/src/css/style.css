@@ -1,0 +1,14 @@
+/* PARAMETROS GENERALES */
+
+/* Para manejar los rem */
+/*facilita el uso de los rem (1 rem=10px)*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--fuente);
+    height: 3000px;
+    overflow-x: hidden;   
+}
