@@ -1,50 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Javier de la Torre Web Developer">
-  <meta name="description" content="Portafolio y presentación del desarrollador de aplicaciones web Javier de la Torre">
-  <meta name="keywords"
-    content="HTML, CSS, JavaScript, SQL, PHP, front-end, back-end, full-stack, Node.js, React , web development">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier de la Torre Web Developer" />
+    <meta name="description"
+        content="Portafolio y presentación del desarrollador de aplicaciones web Javier de la Torre" />
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, SQL, PHP, front-end, back-end, full-stack, Node.js, React , web development" />
     <title>Javier de la Torre | Desarrollo Web</title>
-    <link rel="shortcut icon" href="./src/media/logo/favicon16x16.png" type="image/x-icon">
-    <link rel="preload" href="./src/css/normalize.css" as="style">
-    <link rel="stylesheet" href="./src/css/normalize.css">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="shortcut icon" href="./src/media/logo/favicon16x16.png" type="image/x-icon" />
+    <link rel="preload" href="./src/css/normalize.css" as="style" />
+    <link rel="stylesheet" href="./src/css/normalize.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="https://kit.fontawesome.com/3c71c981a9.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
+
 <body>
     <header>
         <!------ BARRA DE NAVEGACION ----->
+
         <nav class="nav">
-            <div class="nav__brand">  <!--TODO fondo amarillo, icono redondo-->
-                <a href="">
-                    <img src="./src/media/logo/JTA-logo.svg" alt="logo de la pagina web">
+            <div class="nav__brand">
+                <a href="index.html">
+                    <img class="nav__brand-logo scale" src="./src/media/logo/JTA-logo.svg"
+                        alt="logo de la pagina web" />
                 </a>
             </div>
-            <ul class="nav__tabs">
-                <li class="nav__tab"><a href="" class="nav__link">Sobre mí</a></li>
-                <li class="nav__tab"><a href="" class="nav__link">Proyectos</a></li>
-                <li class="nav__tab"><a href="" class="nav__link">Contacto</a></li>
+            <i class="nav__icon fa-solid fa-bars fa-2xl"></i>
+            <ul class="nav__tabs nav__tabs--responsive">
+                <li class="nav__tab nav__tab--responsive nav__tab--1 scale light">
+                    <a href="#sobreMi" class="nav__link">Sobre mí</a>
+                </li>
+                <li class="nav__tab nav__tab--responsive nav__tab--2 scale light">
+                    <a href="#proyectos" class="nav__link">Proyectos</a>
+                </li>
+                <li class="nav__tab nav__tab--responsive nav__tab--3 scale light">
+                    <a href="#contacto" class="nav__link">Contacto</a>
+                </li>
             </ul>
         </nav>
-
     </header>
-    
     <main>
-       <aside>    <!--TODO puntos de progreso-->
-        <ul class="nav__tabs">
-            <li class="nav__tab"><a href="" class="nav__link">Sobre mí</a></li>
-            <li class="nav__tab"><a href="" class="nav__link">Proyectos</a></li>
-            <li class="nav__tab"><a href="" class="nav__link">Contacto</a></li>
-        </ul>
-       </aside>
+        <section class="hero__container">
+            <div class="hero__column">
+                <div class="hero__img-container">
+                    <img class="hero__img" src="./src/media/logo/JTA-logo.svg" alt="" />
+                </div>
+            </div>
+            <div class="hero__column">
+                <div class="hero__text-container">
+                    <h2 class="hero__text--title">
+                        ¡Hola, soy
+                        <span class="text__underline" data-text="Javier!">Javier!</span>
+                    </h2>
+                    <p class="hero__text">
+                        Web Developer &lbrace;
+                        <span class="text__animation"></span> &rbrace;
+                    </p>
+                </div>
+            </div>
+        </section>
+        <aside class="nav__container">
+            <nav class="nav__vertical">
+                <ul class="nav__vertical-tabs">
+                    <li class="nav__vertica-tab">
+                        <a href="#sobreMi" class="nav__vertical-link">Sobre mí</a>
+                    </li>
+                    <li class="nav__vertica-tab">
+                        <a href="#proyectos" class="nav__vertical-link">Proyectos</a>
+                    </li>
+                    <li class="nav__vertica-tab">
+                        <a href="#contacto" class="nav__vertical-link">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--TODO puntos de progreso-->
+        </aside>
+
+        <section id="sobreMi" class="container">
+            <div class="wrapper--column">
+                <div class="console">
+                    <div class="console console__menu">
+                        <i class="fa-solid fa-window-minimize"></i>
+                        <i class="fa-solid fa-window-maximize"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                    <div class="console console__window">
+                        <pre><code>
+01    <span class='morado'>const</span> <span class="blanco">Javier = </span><span class="amarillo">{</span>
+02       <span class="azul">nombre:</span> <span class="verde">"Javier"</span>,
+03        <span class="azul">profesion:</span> <span class="verde">"Desarrollador Full Stack"</span>,
+04        <span class="azul">idiomas:</span> <span class="amarillo">[</span><span class="verde">"Español"</span>, <span class="verde">"Inglés"</span><span class="amarillo">]</span>,
+05        <span class="azul">habilidades:</span> <span class='morado'>{</span>
+06            <span class="azul">frontend:</span> <span class="amarillo">[</span><span class="verde">"HTML"</span>, <span class="verde">"CSS"</span>, <span class="verde">"JavaScript"</span>, <span class="verde">"React"</span>, <span class="verde">"Angular"</span><span class="amarillo">]</span>,
+07            <span class="azul">backend:</span> <span class="amarillo">[</span><span class="verde">"Node.js"</span>, <span class="verde">"Express"</span>, <span class="verde">"Python"</span>, <span class="verde">"Django"</span><span class="amarillo">]</span>,
+08            <span class="azul">basesDeDatos:</span> <span class="amarillo">[</span><span class="verde">"MongoDB"</span>, <span class="verde">"MySQL"</span><span class="amarillo">]</span>,
+09            <span class="azul">herramientas:</span> <span class="amarillo">[</span><span class="verde">"Git"</span>, <span class="verde">"Docker"</span>, <span class="verde">"Webpack"</span><span class="amarillo">]</span>
+10              <span class='morado'>}</span>,
+11        <span class="azul">experiencia:</span> <span class="verde">"3 años en desarrollo web"</span>,
+12        <span class="azul">ubicacion:</span> <span class="verde">"Madrid, España"</span>,
+13        <span class="azul">pasatiempos:</span> <span class="amarillo">[</span><span class="verde">"Leer"</span>, <span class="verde">"Viajar"</span>, <span class="verde">"Gaming"</span><span class="amarillo">]</span>,
+14        <span class="azul">contacto</span> = <span class="amarillo">()</span> <span class='azul'>{</span>
+15            <span class='morado'>return</span> <span class="verde">"Puedes contactarme <a href="#contacto">más abajo.</a>"</span>;
+16              <span class='azul'>}</span>,
+17        <span class="azul">presentacion</span> = <span class="amarillo">()</span> => <span class='azul'>{</span>
+18            <span class='morado'>return</span> <span class="verde">`Hola, soy <span class="amarillo">${<span class="rojo">this</span><span class="blanco">.nombre</span>}</span>, un <span class="amarillo">${<span class="rojo">this</span><span class="blanco">.profesion</span>}</span> con una experiencia
+19                    de <span class="amarillo">${<span class="rojo">this</span><span class="blanco">.experiencia</span>}</span>. Hablo <span class="amarillo">${<span class="rojo">this</span><span class="blanco">.idiomas.</span><span class="azul">join</span>(<span class="verde">" y "</span>)</span>}.`</span>;
+20              <span class='azul'>}</span>
+21        <span class="amarillo">}</span>;
+22        
+23    <span class="blanco">Javier.</span><span class="azul">presentacion()</span>;
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="model3D__container">
+                    <model-viewer class="model3D" src="./src/media/3dModel.glb" alt="Modelo 3D" auto-rotate
+                        camera-controls></model-viewer>
+                    <div class="data">
+                        <i class="slider__control fa-solid fa-chevron-left"></i>
+
+                        <div class="slider slider__visible">
+                            <h3 class="slider__title">Javier de la Torre</h3>
+                            <div class="slider__text slider__text--portrait">
+                                <span class="slider__item slider__item--portrait"><i
+                                        class="slider__icon--portrait negro fa-solid fa-gear fa-2xl"></i>Full Stack
+                                    Developer</span>
+                                <span class="slider__item slider__item--portrait"><i
+                                        class="slider__icon--portrait negro fa-solid fa-location-dot fa-2xl"></i>Madrid,
+                                    España</span>
+                                <span class="slider__item slider__item--portrait"><i
+                                        class="slider__icon--portrait negro fa-solid fa-star fa-2xl"></i>3 años de
+                                    experiencia</span><!--TODO añadir enlace a curriculum-->
+                            </div>
+                            <button class="slider__button">Hablemos</button>
+                        </div>
+
+                        <div class="slider">
+                            <h4 class="slider__title">Front End</h4>
+                            <div class="slider__text">
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="W3C, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:HTML5_logo_and_wordmark.svg"><img
+                                            width="50" alt="HTML5 logo and wordmark"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/32px-HTML5_logo_and_wordmark.svg.png?20170517184425" /></a>HTML<progress
+                                        max="100" value="90"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="Rudloff, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:CSS3_logo_and_wordmark.svg"><img
+                                            width="50" alt="CSS3 logo and wordmark"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/32px-CSS3_logo_and_wordmark.svg.png?20160530175649" /></a>
+                                    CSS<progress max="100" value="70"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="JavaScript Corp., CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:Javascript_Logo.png"><img
+                                            width="50" alt="Javascript Logo"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png?20210407134359" /></a>JavaScript
+                                    <progress max="100" value="75"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="Meta Platforms, Public domain, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:React_Logo_SVG.svg"><img
+                                            width="50" alt="React Logo SVG"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/32px-React_Logo_SVG.svg.png?20231112063719" /></a>
+                                    React <progress max="100" value="70"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="Google, Public domain, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:Angular_full_color_logo.svg"><img
+                                            width="50" alt="Angular full color logo"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/32px-Angular_full_color_logo.svg.png?20160527092314" /></a>
+                                    Angular <progress max="100" value="70"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="™/®WordPress, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:Wordpress-Logo.svg"><img
+                                            width="50" alt="Wordpress-Logo"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Wordpress-Logo.svg/32px-Wordpress-Logo.svg.png?20210511042647" /></a>
+                                    Wordpress <progress max="100" value="85"></progress></span>
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <h4 class="slider__title">Back end y BBDD</h4>
+                            <div class="slider__text">
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="Ryan Dahl, MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:Node.js_logo.svg"><img width="64"
+                                            alt="Node.js logo"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/32px-Node.js_logo.svg.png?20170401104355" /></a>
+                                    Node.js <progress max="100" value="70"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="Colin Viebrock, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:PHP-logo.svg"><img width="64"
+                                            alt="PHP-logo"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/64px-PHP-logo.svg.png?20180502235434" /></a>
+                                    php <progress max="100" value="75"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="Logo Python, CC BY 2.5 &lt;https://creativecommons.org/licenses/by/2.5&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:Python-logo.png"><img width="64"
+                                            alt="Python-logo"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Python-logo.png/512px-Python-logo.png?20240316152045" /></a>
+                                    Python <progress max="100" value="60"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="vscode-icons, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:Mongodb-svgrepo-com.svg"><img
+                                            width="64" alt="Mongodb-svgrepo-com"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Mongodb-svgrepo-com.svg/32px-Mongodb-svgrepo-com.svg.png?20230427111850" /></a>
+                                    MongoDB <progress max="100" value="60"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="™/®Oracle Corporation, Public domain, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:MySQL_textlogo.svg"><img
+                                            width="64" alt="MySQL textlogo"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/64px-MySQL_textlogo.svg.png?20210508081050" /></a>
+                                    MySQL <progress max="100" value="75"></progress></span>
+                            </div>
+                        </div>
+
+                        <div class="slider">
+                            <h4 class="slider__title">Tecnologías auxiliares</h4>
+                            <div class="slider__text">
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="GitHub, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:GitHub_Invertocat_Logo.svg"><img
+                                            width="64" alt="GitHub Invertocat Logo"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/32px-GitHub_Invertocat_Logo.svg.png?20230417032619" /></a>
+                                    GitHub <progress max="100" value="75"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="vscode-icons, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:Docker-svgrepo-com.svg"><img
+                                            width="64" alt="Docker-svgrepo-com"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/32px-Docker-svgrepo-com.svg.png?20230427111848" /></a>
+                                    Docker <progress max="100" value="65"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="Adobe Inc., Public domain, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:Adobe_Photoshop_CC_icon.svg"><img
+                                            width="64" alt="Adobe Photoshop CC icon"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/512px-Adobe_Photoshop_CC_icon.svg.png?20200616073617" /></a>
+                                    Photoshop <progress max="100" value="65"></progress></span>
+                                <span class="slider__item"><a class="slider__icon"
+                                        title="™/®Adobe Inc., Public domain, via Wikimedia Commons"
+                                        href="https://commons.wikimedia.org/wiki/File:Adobe_Illustrator_CC_icon.svg"><img
+                                            width="64" alt="Adobe Illustrator CC icon"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/32px-Adobe_Illustrator_CC_icon.svg.png?20220814183839" /></a>
+                                    Illustrator <progress max="100" value="80"></progress></span>
+                            </div>
+                        </div>
+                        <i class="slider__control fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+                <button id="desplegarInfo" onclick="desplegarDiv()" class="button">
+                    Ejecutar<span></span>
+                </button>
+            </div>
+        </section>
+
+        <section id="proyectos" class="container container--blanco negro">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#393745">
+                <path d="M0 0v84l500 16 500-16V0H0z" opacity=".2"></path>
+                <path d="M0 0v64l500 36 500-36V0H0z" opacity=".4"></path>
+                <path d="M0 0v44l500 56 500-56V0H0z" opacity=".4"></path>
+                <path d="M0 0v24l500 76 500-76V0H0z" opacity=".5"></path>
+                <path d="M0 0v4l500 96 500-96V0H0z"></path>
+            </svg>
+            <div class="wrapper--column">
+                <form action="">
+                    <select name="tipoProyecto" id="tipoProyecto">
+                        <option value="todo" selected></option>
+                        <option value="programacion">Programación</option>
+                        <option value="front end">Front End</option>
+                        <option value="back end">Back End</option>
+                    </select>
+                </form>
+                <button id="proyectos" onclick="filtrarProyectos()" class="button">
+                    Ejecutar<span></span>
+                </button>
+
+                <div class="card__container">
+                    <!-- <div class="card">
+                        <div class="card__icon-wrapper">
+                            <div class="card__icon card__icon--practica" data-text="Práctica">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1.66em" height="1em" viewBox="0 0 1696 1536">
+                                <path fill="currentColor" d="M1671 350q40 57 18 129l-275 906q-19 64-76.5 107.5T1215 1536H292q-77 0-148.5-53.5T44 1351q-24-67-2-127q0-4 3-27t4-37q1-8-3-21.5t-3-19.5q2-11 8-21t16.5-23.5T84 1051q23-38 45-91.5t30-91.5q3-10 .5-30t-.5-28q3-11 17-28t17-23q21-36 42-92t25-90q1-9-2.5-32t.5-28q4-13 22-30.5t22-22.5q19-26 42.5-84.5T372 283q1-8-3-25.5t-2-26.5q2-8 9-18t18-23t17-21q8-12 16.5-30.5t15-35t16-36t19.5-32T504.5 12t36-11.5T588 6l-1 3q38-9 51-9h761q74 0 114 56t18 130l-274 906q-36 119-71.5 153.5T1057 1280H188q-27 0-38 15q-11 16-1 43q24 70 144 70h923q29 0 56-15.5t35-41.5l300-987q7-22 5-57q38 15 59 43m-1064 2q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5T1279 352l21-64q4-13-2-22.5t-20-9.5H670q-13 0-25.5 9.5T628 288zm-83 256q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5T1196 608l21-64q4-13-2-22.5t-20-9.5H587q-13 0-25.5 9.5T545 544z"/>
+                              </svg>
+                            </div>
+                            <div class="card__icon card__icon--programacion" data-text="Programación">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.5em" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.3">
+                                  <path d="M17 15h-5m-5-5l.234.195c1.282 1.068 1.923 1.602 1.923 2.305s-.64 1.237-1.923 2.305L7 15"/>
+                                  <path d="M22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536"/>
+                                </g>
+                              </svg>
+                            </div>
+                            <div class="card__icon card__icon--front-end" data-text="Front end">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" viewBox="0 0 16 16">
+                                <path fill="currentColor" d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm5 10v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2v5a2 2 0 0 1-2 2z"/>
+                              </svg>
+                            </div>
+                            <div class="card__icon card__icon--back-end" data-text="Back end">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" viewBox="0 0 16 16">
+                                <path fill="currentColor" d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                              </svg>
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">${this._nombre}</h3>
+                            <p class="card__text">${this._descripcion} Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div> -->
+
+                    <div class="card"></div>
+
+                    <div class="card"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <script src="./src/js/main.js"></script>
 </body>
+
 </html>
+

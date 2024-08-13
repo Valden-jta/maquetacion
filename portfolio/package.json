@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Web de portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Javier de la Torre Aragón",
+  "license": "ISC",
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "es6-shim": "^0.35.8",
+    "reflect-metadata": "^0.2.2",
+    "undici-types": "^6.19.6"
+  }
+}
