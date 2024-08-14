@@ -13,5 +13,8 @@
     "es6-shim": "^0.35.8",
     "reflect-metadata": "^0.2.2",
     "undici-types": "^6.19.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.3.0"
   }
 }

@@ -528,7 +528,23 @@ h6 {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
+  overflow: hidden;
   border: 1px solid black;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
 }
 
 .card__icon-wrapper {
@@ -547,24 +563,24 @@ h6 {
   width: 3em;
   height: 2em;
   border-radius: 50px;
-  color:var(--blanco);
+  color: var(--blanco);
   z-index: 99;
   transition: width 0.3s ease-out;
 }
 
 .card__icon svg {
-  position: absolute; 
-  left: 1rem; 
+  position: absolute;
+  left: 1rem;
 }
 
 .card__icon::after {
-  content: ''; 
+  content: "";
   opacity: 0;
   text-align: center;
   transition: opacity 0.5s ease;
   position: absolute;
   left: 3em;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .card__icon:hover {
@@ -572,14 +588,14 @@ h6 {
 }
 
 .card__icon:hover::after {
-  content: attr(data-text); 
-  opacity: 1; 
+  content: attr(data-text);
+  opacity: 1;
 }
 
 .card__icon--practica {
   background-color: var(--blanco);
   font-weight: 700;
-  color:var(--negro-texto);
+  color: var(--negro-texto);
   top: 0;
 }
 
@@ -611,9 +627,8 @@ h6 {
   transition: opacity 0.5s ease;
 }
 
-
 .card:hover .card__content {
-opacity: 1;
+  opacity: 1;
 }
 
 .card__title {
@@ -622,7 +637,7 @@ opacity: 1;
   padding-right: 0.5em;
   width: 100%;
   text-align: left;
-  font-size:3rem;
+  font-size: 3rem;
   font-weight: 800;
   color: var(--blanco);
 }
@@ -630,8 +645,6 @@ opacity: 1;
 .card__text {
   margin-top: 12rem;
 }
-
-
 
 /** --------------------------- ANIMACIONES --------------------------- */
 /**------------------------------------------------------------------- */
@@ -906,6 +919,17 @@ opacity: 1;
 
 /*? ------ animaciones proyectos ------ */
 /* ----------------------------------- */
+
+/* Cambio de imagenes en cards (+js) */
+.card.fade-out::after {
+  opacity: 0;
+}
+
+.card.fade-in::after {
+  opacity: 1;
+}
+
+
 
 /** --------------------------- RESPONSIVE --------------------------- */
 /**------------------------------------------------------------------- */
