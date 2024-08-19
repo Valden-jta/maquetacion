@@ -4,14 +4,17 @@
 /* ---- fuentes ---- */
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&display=swap");
-
+@font-face {
+  font-family: 'consolas';
+  src: url('../fuentes/Consolas.ttf');
+}
 /* ---- Variables ---- */
 :root {
   /* COLORES */
-  --bg-primary: #393745;
+  --bg-primary: rgb(57, 55, 69);
   --bg-secondary: #282c34;
   --blanco: #eeeeee;
-  --amarillo: #f0db4f;
+  --amarillo: rgb(240, 219, 79);
   --highlight: #f0b34f;
   --morado: #6d679b;
   --negro-texto: #141414;
@@ -19,6 +22,9 @@
   /* FUENTES */
   --text: "Roboto", sans-serif;
   --text-title: "Montserrat", sans-serif;
+
+  /* IMAGENES CARDS */
+  --background-image: "";
 }
 
 /* FORMATO */
@@ -41,7 +47,7 @@ body {
   height: 200vh;
 }
 
-/* TITUTOLOS */
+/* TÍTULOS */
 h1,
 h2,
 h3,
@@ -49,6 +55,11 @@ h4,
 h5,
 h6 {
   font-family: var(--text-title);
+}
+
+.section__title {
+  font-size: 6rem;
+  margin: 10px auto;
 }
 
 /* COLORES DE TEXTO */
@@ -77,9 +88,10 @@ h6 {
 /*  CONTENEDORES */
 .container {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 2rem auto 0 auto;
   padding: 200px 0 0;
@@ -194,6 +206,45 @@ h6 {
   transition: opacity 0.3s, text-shadow 0.3s;
 }
 
+/** ------------------------------ footer ------------------------------ */
+/**------------------------------------------------------------------- */
+
+footer {
+  height: 50vh;
+  z-index: -99;
+  background-size: cover;
+  position: relative;
+}
+.footer {
+  width: 100%;
+  height: 100%;
+  margin: 1rem auto;
+  padding: 1rem 5rem;
+  background-color: var(--bg-secondary);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--blanco);
+}
+.footer__1 {
+  width: 50%;
+  font-family: var(--text-title);
+  font-size: 80px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--blanco);
+  display: flex;
+  justify-content: space-between;
+}
+.footer__1 a {
+ text-decoration: none;
+ color: inherit;
+}
+
+.footer__2 {}
+
+
 /** ------------------------------ hero ------------------------------ */
 /**------------------------------------------------------------------- */
 
@@ -272,6 +323,7 @@ h6 {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   color: darkgrey;
@@ -294,7 +346,7 @@ h6 {
   background: transparent;
   border: none;
   position: absolute;
-  top: calc(60%);
+  top: calc(55%);
   color: var(--blanco);
   z-index: 1;
   transition: top 0.5s ease-in;
@@ -349,7 +401,7 @@ h6 {
   align-items: center;
   width: 1000px;
   position: relative;
-  top: -100px;
+  top: -500px;
   border-radius: 30px;
   gap: 10px;
   opacity: 0;
@@ -364,7 +416,11 @@ h6 {
 }
 
 .model3D__container.desplegar-animation + .button {
-  top: calc(90% + 20px);
+  top: calc(55% + 20px);
+}
+
+.button.enviar {
+  top: calc(60% + 20px);
 }
 
 .model3D {
@@ -508,64 +564,128 @@ h6 {
   background-color: var(--blanco);
 }
 
+#proyectos .form__title {
+  margin: 1rem auto;
+  padding-bottom: 15px;
+  font-size: 3rem;
+  color: var(--negro-texto);
+}
+
+.seleccion__wrapper {
+  margin: 5rem auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 99;
+}
+
+.seleccion__input--select {
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid var(--bg-secondary);
+  background-color: transparent;
+  transition: width 0.5s ease;
+}
+
+.seleccion__input--select:focus {
+  width: 100%;
+  outline: none;
+}
+.seleccion__input-select-option {
+  background-color: inherit;
+}
+
+.seleccion__input-select-option:hover {
+  color: var(--amarillo);
+}
+
 .card__container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  height: fit-content;
   width: 100%;
   margin: 2rem auto;
-  padding: 0 2rem;
+  padding: 0 20rem;
 }
 
 .card {
+  background-size: cover;
+  background-position: center;
   border-radius: 30px;
   padding: 2rem;
   height: 30rem;
+  width: 25rem;
   max-width: 25%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 2rem;
   position: relative;
   overflow: hidden;
-  border: 1px solid black;
+  background-color: var(--negro-texto);
 }
 
-.card::after {
+.card--background {
+  height: 100%;
+  z-index: 0;
+}
+.card--background::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-image: var(
+    --background-image
+  ); /*desde js no se puede acceer directamente al pseudoelemento, asi que lo introducimos a través de una variable */
+  filter: contrast(90%) brightness(80%) saturate(85%) hue-rotate(20deg);
+  background-attachment: scroll;
   opacity: 1;
-  transition: opacity 1s ease-in-out;
+  transition: all 0.3s ease-in;
   z-index: -1;
+}
+.card--background:hover::after {
+  opacity: 0.5;
+}
+
+/* Cambio de imagenes en cards (+js) */
+.card--background::after.fade-out {
+  opacity: 0;
+}
+
+.card--background::after.fade-in {
+  opacity: 0.5;
 }
 
 .card__icon-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 .card__icon {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: absolute;
-  left: 0.5rem;
+  margin-bottom: 10px;
   width: 3em;
   height: 2em;
   border-radius: 50px;
   color: var(--blanco);
-  z-index: 99;
+  z-index: 999;
   transition: width 0.3s ease-out;
+  box-shadow: 1px 2px 4px var(--bg-primary);
 }
 
 .card__icon svg {
@@ -596,54 +716,198 @@ h6 {
   background-color: var(--blanco);
   font-weight: 700;
   color: var(--negro-texto);
-  top: 0;
 }
 
 .card__icon--programacion {
   background-color: #b0a666;
   font-weight: 700;
-  top: 35px;
 }
 
 .card__icon--front-end {
   background-color: var(--highlight);
   font-weight: 700;
-  top: 70px;
 }
 
 .card__icon--back-end {
   background-color: var(--morado);
   font-weight: 700;
-  top: 105px;
 }
 
 .card__content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-left: 2rem;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.card:hover .card__content {
-  opacity: 1;
+  justify-content: center;
+  align-items: space-between;
+  width: 100%;
+  margin: 1rem auto;
+  color: var(--blanco);
+  z-index: 9;
 }
 
 .card__title {
-  margin-bottom: 1rem;
-  margin-left: 10rem;
-  padding-right: 0.5em;
-  width: 100%;
-  text-align: left;
+  padding: 5px 10px;
+  align-self: center;
+  white-space: wrap;
   font-size: 3rem;
+  position: absolute;
+  top: 50%;
   font-weight: 800;
-  color: var(--blanco);
+  z-index: 999;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+}
+
+.card__content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: auto;
+  align-items: center;
+  height: 50%;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  opacity: 0;
 }
 
 .card__text {
-  margin-top: 12rem;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  font-size: 18px;
+}
+
+.card__text--tag {
+  font-weight: 700;
+  text-align: left;
+  color: var(--highlight);
+  margin: 1rem 0;
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  font-size: 14px;
+}
+
+.card__text--link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--text-title);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blanco);
+  margin: 1rem 0;
+  padding: 2px 5px;
+  border-radius: 30px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s ease, color 0.5s ease;
+}
+.card__text--link::before {
+  content: "ver";
+  padding-right: 5px;
+}
+.card__text--link:hover,
+.card__text--link:hover::before {
+  color: var(--amarillo);
+}
+
+.card:hover .card__title {
+  opacity: 0;
+}
+.card:hover .card__text,
+.card:hover .card__text--link,
+.card:hover .card__text--tag,
+.card:hover .card__content-text {
+  opacity: 1;
+}
+
+/** ---------------------------- Contacto ---------------------------- */
+/**------------------------------------------------------------------- */
+
+#contacto {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#contacto::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../media/logo/JTA-logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+  opacity: 0.1;
+}
+.console.xl {
+  width: 40%;
+  height: 600px;
+  margin: 3rem auto;
+  font-family: 'consolas';
+}
+
+.form__wrapper {
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: fcenter;
+  z-index: 99;
+  overflow: visible;
+}
+pre.console__code {
+  text-align: left;
+  width: 100%;
+}
+
+.form__input--fila {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 3px 0;
+}
+
+.form__label {
+  color: gray;
+  display: block;
+}
+
+.form__input {
+  border: none;
+  color: #98c379;
+  background-color: transparent;
+
+  transition: padding 1s ease, color 0.3s ease;
+}
+textarea.form__input {
+  height: 20px;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__input:hover::placeholder {
+  color: var(--amarillo);
 }
 
 /** --------------------------- ANIMACIONES --------------------------- */
@@ -740,7 +1004,7 @@ h6 {
 @keyframes palabras {
   0%,
   20% {
-    content: "Full Stack;";
+    content: "Full Stack";
   }
   21%,
   40% {
@@ -916,20 +1180,6 @@ h6 {
     opacity: 0;
   }
 }
-
-/*? ------ animaciones proyectos ------ */
-/* ----------------------------------- */
-
-/* Cambio de imagenes en cards (+js) */
-.card.fade-out::after {
-  opacity: 0;
-}
-
-.card.fade-in::after {
-  opacity: 1;
-}
-
-
 
 /** --------------------------- RESPONSIVE --------------------------- */
 /**------------------------------------------------------------------- */
