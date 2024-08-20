@@ -1,5 +1,7 @@
 # maquetacion
 
-## Día 1
+
+## Día 2
 
 - Retos completos
+
