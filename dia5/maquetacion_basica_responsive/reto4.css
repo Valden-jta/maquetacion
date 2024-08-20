@@ -1,0 +1,214 @@
+/* *IMPORTS -------------- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* *Global -------------- */
+* {
+  /* "*": selector universal */
+  font-family: "Montserrat", sans-serif; /* Establece la fuente de toda la página */
+  box-sizing: border-box; /* ajuste al borde del contenedor */
+  padding: 0; /* Espaciado: espacio que hay entre el borde y los elementos dentro del contenedor */
+  margin: 0; /* Margen: espacio que hay entre el borde y otros elementos fuera del contenedor */
+  font-size: 16px;
+}
+h1 {
+  font-size: 3em;
+}
+
+/** ------- BARRA DE NAVEGACIÓN -------- **/
+/*========================================*/
+
+nav {
+  background-color: black;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: sticky;
+}
+
+nav a {
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/** --------------- HOME --------------- **/
+/*========================================*/
+
+#home {
+  padding: 5% 15%;
+  height: 94.5vh;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 100px;
+  overflow: scroll;
+}
+.col65 {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#home .col65 h1 {
+  margin-bottom: 50px;
+}
+.col65 .parrafo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.col65 .parrafo p {
+  padding: 10px 0;
+}
+
+.col35 {
+  background-image: url("./src/imagen1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35%;
+}
+
+/** --------------- GALERIA --------------- **/
+/*===========================================*/
+#galeria {
+  height: 94.5vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0;
+  justify-content: space-between;
+  align-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.foto {
+  width: 33.33%;
+  height: 50%;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/** --------------- BLOG --------------- **/
+/*========================================*/
+
+#blog {
+  padding: 0% 10%;
+  height: 94.5vh;
+  display: block;
+}
+#blog h1 {
+  text-align: center;
+}
+
+.flexCols {
+  padding-top: 100px;
+  display: flex;
+  flex-flow: row norap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.col50 {
+  width: 50%;
+  text-align: center;
+}
+.col50 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.col50 p {
+  padding: 10px 0;
+}
+
+/*? Responsive ------  */
+
+/* Tablet */
+@media screen and (max-width:768px) {
+ #home {
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+ .col65 {
+  width: 100%;
+  padding-top: 50%;
+ }
+
+ .col35 {
+  width:100%;
+  height:50vh;
+  background-size: contain;
+ }
+
+ #galeria {
+  flex-direction:column;
+  flex-wrap: nowrap;
+  overflow:scroll;
+ }
+
+ .foto {
+  width:100%
+ }
+ .flexCols {
+  flex-direction: column;
+}
+
+.col50 {
+  width: 100%;
+}
+}
+
+
+
+/* Movil */
+@media screen and (max-width: 450px) {
+  #home {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+   .col65 {
+    width: 100%;
+    padding-top: 250%;
+   }
+
+   .col35 {
+    width:100%;
+    height:50vh;
+    background-size: contain;
+   }
+
+   #galeria {
+    flex-direction:column;
+    flex-wrap: nowrap;
+    overflow:scroll;
+   }
+  
+   .foto {
+    width:100%
+   }
+
+   .flexCols {
+    flex-direction: column;
+  }
+  
+  .col50 {
+    width: 100%;
+  }
+  }
