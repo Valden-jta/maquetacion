@@ -63,6 +63,12 @@ body {
     width: 100%;
     background-color: var(--azul);
   }
+  .containerBlue2 {
+    margin: 0 auto;
+    padding: 2% 25%;
+    width: 100%;
+    background-color: var(--azulClaro);
+  }
 
   .col30 {
     width: 30%;
