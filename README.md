@@ -2,4 +2,4 @@
 
 ## Día 6
 
-- Retos grid
+- Retos grid completos
