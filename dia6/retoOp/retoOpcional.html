@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tres en Raya</title>
+</head>
+<body>
+    <h1>Tres en raya</h1>
+    <div id="pantalla--inicio" class="container">
+        <button
+        onclick="empezarJuego()"
+        id="empezarJuego"
+        class="button button--empezar"
+        type="button"
+      >
+        Empezar juego
+      </button>
+    </div>
+    <div id="pantalla--juego" class="container container--tablero">
+        <div id="j1" class="marcador">
+            <h2>Jugador 1</h2>
+            <p>Rondas ganadas: <span class="rondasJ1"></span></p>
+        </div>
+        <div id="areaTablero" class="grid__container">
+            <div class="casilla"><div id="0" class="circulo"></div></div>
+            <div class="casilla"><div id="1" class="circulo"></div></div>
+            <div class="casilla"><div id="2" class="circulo"></div></div>
+            <div class="casilla"><div id="3" class="circulo"></div></div>
+            <div class="casilla"><div id="4" class="circulo"></div></div>
+            <div class="casilla"><div id="5" class="circulo"></div></div>
+            <div class="casilla"><div id="6" class="circulo"></div></div>
+            <div class="casilla"><div id="7" class="circulo"></div></div>
+            <div class="casilla"><div id="8" class="circulo"></div></div>
+        </div>
+        <div id="j2" class="marcador">
+            <h2>Jugador 2</h2>
+            <p>Rondas ganadas: <span class="rondasJ2"></span></p>
+        </div>
+    </div>
+    <div id="pantalla--fin" class="container--column">
+        <h2>Fin de la partida</h2>
+        <p class="mensajes"></p>
+        <button
+        onclick="nuevaRonda()"
+        id="empezarJuego"
+        class="button button--empezar"
+        type="button"
+      >
+        Jugar de nuevo
+      </button>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+/*********************** Estructrua Grid ***********************/
+
+.grid__container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "menu contenido contenido"
+    "footer footer footer";
+}
+
+.grid__header {
+  height: 12.5vh;
+
+  grid-area: header;
+  display: grid;
+  grid-template-areas: "header header imagen";
+}
+.grid__header-1 {
+  grid-area: header;
+  padding:20px;
+  background-color: #b01d13;
+}
+.grid__header-imagen {
+  grid-area: imagen;
+  padding:20px;
+  background-color: #560f0d;
+}
+
+.grid__menu {
+  grid-area: menu;
+  background-color: #ff6825;
+  display: grid;
+  grid-template-areas:
+    "aside1"
+    "aside2";
+}
+.grid__menu-item {
+  background-color: white;
+  color: #ff6825;
+  height: 200px;
+  margin: 20px 20px;
+}
+.menu-item--1 {
+  grid-area: aside1;
+  padding:20px;
+}
+.menu-item--2 {
+  grid-area: aside2;
+  padding:20px;
+  margin-top: 36%;
+}
+
+.grid__contenido {
+  height: 80vh;
+  grid-area: contenido;
+  background-color: #ff391e;
+  height: 700px;
+  display: grid;
+  grid-template-areas:
+    "contenido"
+    "texto";
+}
+.grid__contenido-item {
+  border: 2px solid white;
+  padding:20px;
+  margin: auto 20px;
+}
+.contenido-item--1 {
+    grid-area: contenido;
+    margin-top:15px;
+    margin-bottom: 5px;
+}
+.contenido-item--2 {
+    grid-area: texto;
+    margin-top:5px;
+    margin-bottom: 15px;
+}
+
+.grid__footer {
+  height: 12.5vh;
+  padding:20px;
+  background-color: #560f0d;
+  grid-area: footer;
+}

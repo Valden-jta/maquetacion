@@ -1,7 +1,7 @@
 # maquetacion
 
 
-## Día 1
+## Día 6
 
 - Retos completos
 
@@ -18,3 +18,7 @@
 ## Día 5
 
 -Retos completos (instagram_login y maquetación_basica_responsive)
+
+## Día 6
+
+- Retos grid completos

@@ -1,0 +1,27 @@
+.grid__container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+.grid__child {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+.grid__item--verde {
+    text-transform: uppercase;
+    background-color: #9DFE4C;
+    color: black;
+    text-align: center;
+}
+
+.grid__item--negro {
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
