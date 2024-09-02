@@ -22,3 +22,8 @@
 ## Día 6
 
 - Retos grid completos
+
+
+## Día 7 
+
+- Retos Bootstrap y jQuery
