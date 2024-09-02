@@ -26,4 +26,4 @@
 
 ## Día 7 
 
-- Retos Bootstrap y jQuery
+- Retos Bootstrap y jQuery completos
