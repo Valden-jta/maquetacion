@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,180..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap");
+body {
+  background-color: #1f283a;
+  font-family: "Silkscreen", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/*? =========== estado inicial de contenedores =========== */
+#pantalla--inicio {
+  display: block;
+}
+#pantalla--juego {
+  display: none;
+}
+#controles
+
+
+/*? =========== estilos de contenedores =========== */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2% 0;
+  font-size: 100px;
+  color: white;
+}
+.container__tablero {
+    width: 100%;
+    padding: 1% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.container__instrucciones {
+    margin: 2% 15%;
+    padding: 1%;
+    height: 20vh;
+    color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    background-color: #162035;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.instrucciones {
+    font-size: 25px;
+}
+  
+.container__colores {
+    width: 100%;
+    margin-top: 10%;
+    height: 15vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+.container__buttons {
+    margin: 0 15%;
+    display: flex;
+    justify-content: center;
+} 
+/*? =========== estilos de botones =========== */
+
+.button {
+  font-family: "Silkscreen", sans-serif;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 50px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.button--empezar {
+  display: block;
+  padding: 5% 10%;
+  margin: 10% auto;
+  font-size: 60px;
+}
+.button--empezar:hover {
+  color: #1f283a;
+  background-color: white;
+}
+
+.button--control {
+  padding: 1% 2%;
+  margin: 10% auto;
+  font-size: 30px;
+  width: 500px;
+}
+.button:hover {
+  color: #1f283a;
+  background-color: white;
+}
+#comprobar, #continuar, #reset {
+    display: none;
+    margin:0 auto;
+}
+
+
+/*? =========== estilos de elementos de juego =========== */
+
+.color {
+  background-color: transparent;
+  width: 15%;
+  border: 3px solid #1f283a;
+  border-radius: 40px;
+}
+
+.color--rojo {
+  background-color: rgb(180, 0, 0);
+  transition: background-color 0.3s;
+}
+.color--rojo:hover {
+  background-color: rgb(255, 0, 0);
+  border: 3px solid rgb(180, 0, 0);
+  box-shadow: 0px 0px 105px 45px rgba(255, 0, 0, 0.9);
+}
+.color--rojo--selected {
+  background-color: rgb(255, 0, 0);
+  border: 3px solid rgb(180, 0, 0);
+}
+.color--azul {
+  background-color: rgb(0, 0, 180);
+  transition: background-color 0.3s;
+}
+.color--azul:hover {
+  background-color: rgb(0, 0, 255);
+  border: 3px solid rgb(0, 0, 180);
+  box-shadow: 0px 0px 105px 45px rgba(0, 0, 255, 0.9);
+}
+.color--azul--selected {
+  background-color: rgb(0, 0, 255);
+  border: 3px solid rgb(0, 0, 180);
+}
+.color--amarillo {
+  background-color: rgb(180, 180, 0);
+  transition: background-color 0.3s;
+}
+.color--amarillo:hover {
+  background-color: yellow;
+  border: 3px solid rgb(180, 180, 0);
+  box-shadow: 0px 0px 105px 45px rgba(255, 255, 0, 0.9);
+}
+.color--amarillo--selected {
+  background-color: yellow;
+  border: 3px solid rgb(180, 180, 0);
+}
+.color--verde {
+  background-color: rgb(0, 80, 0);
+  transition: background-color 0.3s;
+}
+.color--verde:hover {
+  background-color: green;
+  border: 3px solid rgb(0, 80, 0);
+  box-shadow: 0px 0px 105px 45px rgba(0, 128, 0, 0.9);
+}
+.color--verde--selected {
+  background-color: green;
+  border: 3px solid rgb(0, 80, 0);
+}
+.color--morado {
+  background-color: rgb(100, 0, 100);
+  transition: background-color 0.3s;
+}
+.color--morado:hover {
+  background-color: rgb(184, 0, 184);
+  border: 3px solid rgb(100, 0, 100);
+  box-shadow: 0px 0px 105px 45px rgba(100, 0, 100, 0.9);
+}
+.color--morado--selected {
+  background-color: rgb(184, 0, 184);
+  border: 3px solid rgb(100, 0, 100);
+}
