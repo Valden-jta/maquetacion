@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier de la Torre Web Developer" />
+    <meta name="description"
+        content="Portafolio y presentación del desarrollador de aplicaciones web Javier de la Torre" />
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, SQL, PHP, front-end, back-end, full-stack, Node.js, React , web development" />
+    <title>Javier de la Torre | Desarrollo Web</title>
+    <link rel="shortcut icon" href="./src/media/logo/favicon16x16.png" type="image/x-icon" />
+    <link rel="preload" href="./src/css/normalize.css" as="style" />
+    <link rel="stylesheet" href="./src/css/normalize.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="https://kit.fontawesome.com/3c71c981a9.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <!------ BARRA DE NAVEGACION ----->
+
+        <nav class="nav">
+            <div class="nav__brand">
+                <a href="index.html">
+                    <img class="nav__brand-logo scale" src="./src/media/logo/JTA-logo.svg"
+                        alt="logo de la pagina web" />
+                </a>
+            </div>
+            <i class="nav__icon fa-solid fa-bars fa-2xl"></i>
+            <ul class="nav__tabs nav__tabs--responsive">
+                <li class="nav__tab nav__tab--responsive nav__tab--1 scale light">
+                    <a href="#sobreMi" class="nav__link">Sobre mí</a>
+                </li>
+                <li class="nav__tab nav__tab--responsive nav__tab--2 scale light">
+                    <a href="#proyectos" class="nav__link">Proyectos</a>
+                </li>
+                <li class="nav__tab nav__tab--responsive nav__tab--3 scale light">
+                    <a href="#contacto" class="nav__link">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero__container">
+            <div class="hero__column">
+                <div class="hero__img-container">
+                    <img class="hero__img" src="./src/media/logo/JTA-logo.svg" alt="" />
+                </div>
+            </div>
+            <div class="hero__column">
+                <div class="hero__text-container">
+                    <h2 class="hero__text--title">
+                        ¡Hola, soy
+                        <span class="text__underline" data-text="Javier!">Javier!</span>
+                    </h2>
+                    <p class="hero__text">
+                        Web Developer:
+                        <span class="text__animation"></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="sobreMi" class="container --align-center --justify-evenly">
+                <div class="wrapper --column --justify-center --align-center">
+                    <img class="about__picture" src="./src/media/portrait.jpg" alt="retrato">
+                </div>
+                <div class="about__content --justify-bewteen --align-center --column">
+                    <h2 class="section__title">Conóceme</h2>
+                    <div class="wrapper">
+                        <div class="timeLine__wrapper --col50">
+                            <h3 class="subsection__title">Trayectoria</h3>
+                            <div>
+                                <?xml version="1.0" ?><svg class="timeLine__icons" fill="none" height="50"
+                                    viewBox="0 0 20 20" width="50" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.8537 11.3542C16.0493 11.1593 16.0499 10.8427 15.855 10.6471L10.39 5.16259C10.1751 4.94688 9.82574 4.94688 9.6108 5.16259L4.14582 10.6471C3.9509 10.8427 3.95147 11.1593 4.14708 11.3542C4.34269 11.5491 4.65927 11.5485 4.85418 11.3529L10.0004 6.18834L15.1466 11.3529C15.3415 11.5485 15.6581 11.5491 15.8537 11.3542ZM15.8537 15.3542C16.0493 15.1593 16.0499 14.8427 15.855 14.6471L10.39 9.16259C10.1751 8.94688 9.82574 8.94688 9.6108 9.16259L4.14582 14.6471C3.9509 14.8427 3.95147 15.1593 4.14708 15.3542C4.34269 15.5491 4.65927 15.5485 4.85418 15.3529L10.0004 10.1883L15.1466 15.3529C15.3415 15.5485 15.6581 15.5491 15.8537 15.3542Z"
+                                        fill="#f0b34f" />
+                                </svg>
+
+                                <div id="timeLine"></div>
+
+                                <svg fill="none" class="timeLine__icons" height="50" viewBox="0 0 20 20" width="50"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.853 8.646a.5.5 0 0 1 .001.707l-5.465 5.484a.55.55 0 0 1-.78 0L4.146 9.353a.5.5 0 1 1 .708-.706L10 13.812l5.147-5.165a.5.5 0 0 1 .707-.001Zm0-4a.5.5 0 0 1 .001.707l-5.465 5.484a.55.55 0 0 1-.78 0L4.146 5.353a.5.5 0 1 1 .708-.706L10 9.812l5.147-5.165a.5.5 0 0 1 .707-.001Z"
+                                        fill="#f0b34f" class="fill-212121"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="acordeon__wrapper --col50">
+                            <h3 class="subsection__title">Tech Stack</h3>
+                            <div class="acordeon">
+                                <div class="acordeon__container">
+                                    <h4 class="acordeon__title">Front End</h4>
+                                    <div class="acordeon__content">
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="W3C, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:HTML5_logo_and_wordmark.svg"><img
+                                                    width="16" alt="HTML5 logo and wordmark"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/32px-HTML5_logo_and_wordmark.svg.png?20170517184425" /></a>HTML<progress
+                                                max="100" value="90"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="Rudloff, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:CSS3_logo_and_wordmark.svg"><img
+                                                    width="16" alt="CSS3 logo and wordmark"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/32px-CSS3_logo_and_wordmark.svg.png?20160530175649" /></a>
+                                            CSS<progress max="100" value="70"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="JavaScript Corp., CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:Javascript_Logo.png"><img
+                                                    width="16" alt="Javascript Logo"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png?20210407134359" /></a>JavaScript
+                                            <progress max="100" value="75"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="Meta Platforms, Public domain, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:React_Logo_SVG.svg"><img
+                                                    width="16" alt="React Logo SVG"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/32px-React_Logo_SVG.svg.png?20231112063719" /></a>
+                                            React <progress max="100" value="70"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="Google, Public domain, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:Angular_full_color_logo.svg"><img
+                                                    width="16" alt="Angular full color logo"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/32px-Angular_full_color_logo.svg.png?20160527092314" /></a>
+                                            Angular <progress max="100" value="70"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="™/®WordPress, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:Wordpress-Logo.svg"><img
+                                                    width="16" alt="Wordpress-Logo"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Wordpress-Logo.svg/32px-Wordpress-Logo.svg.png?20210511042647" /></a>
+                                            Wordpress <progress max="100" value="85"></progress></span>
+                                    </div>
+                                </div>
+                                <div class="acordeon__container">
+                                    <h4 class="acordeon__title">Back end y BBDD</h4>
+                                    <div class="acordeon__content">
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="Ryan Dahl, MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:Node.js_logo.svg"><img
+                                                    width="16" alt="Node.js logo"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/32px-Node.js_logo.svg.png?20170401104355" /></a>
+                                            Node.js <progress max="100" value="70"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="Colin Viebrock, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:PHP-logo.svg"><img width="16"
+                                                    alt="PHP-logo"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/64px-PHP-logo.svg.png?20180502235434" /></a>
+                                            php <progress max="100" value="75"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="Logo Python, CC BY 2.5 &lt;https://creativecommons.org/licenses/by/2.5&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:Python-logo.png"><img
+                                                    width="16" alt="Python-logo"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Python-logo.png/512px-Python-logo.png?20240316152045" /></a>
+                                            Python <progress max="100" value="60"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="vscode-icons, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:Mongodb-svgrepo-com.svg"><img
+                                                    width="16" alt="Mongodb-svgrepo-com"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Mongodb-svgrepo-com.svg/32px-Mongodb-svgrepo-com.svg.png?20230427111850" /></a>
+                                            MongoDB <progress max="100" value="60"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="™/®Oracle Corporation, Public domain, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:MySQL_textlogo.svg"><img
+                                                    width="16" alt="MySQL textlogo"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/64px-MySQL_textlogo.svg.png?20210508081050" /></a>
+                                            MySQL <progress max="100" value="75"></progress></span>
+                                    </div>
+                                </div>
+                                <div class="acordeon__container">
+                                    <h4 class="acordeon__title">Tecnologías auxiliares</h4>
+                                    <div class="acordeon__content">
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="GitHub, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:GitHub_Invertocat_Logo.svg"><img
+                                                    width="16" alt="GitHub Invertocat Logo"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/32px-GitHub_Invertocat_Logo.svg.png?20230417032619" /></a>
+                                            GitHub <progress max="100" value="75"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="vscode-icons, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:Docker-svgrepo-com.svg"><img
+                                                    width="16" alt="Docker-svgrepo-com"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/32px-Docker-svgrepo-com.svg.png?20230427111848" /></a>
+                                            Docker <progress max="100" value="65"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="Adobe Inc., Public domain, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:Adobe_Photoshop_CC_icon.svg"><img
+                                                    width="16" alt="Adobe Photoshop CC icon"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/512px-Adobe_Photoshop_CC_icon.svg.png?20200616073617" /></a>
+                                            Photoshop <progress max="100" value="65"></progress></span>
+                                        <span class="acordeon__item"><a class="acordeon__icon"
+                                                title="™/®Adobe Inc., Public domain, via Wikimedia Commons"
+                                                href="https://commons.wikimedia.org/wiki/File:Adobe_Illustrator_CC_icon.svg"><img
+                                                    width="16" alt="Adobe Illustrator CC icon"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/32px-Adobe_Illustrator_CC_icon.svg.png?20220814183839" /></a>
+                                            Illustrator <progress max="100" value="80"></progress></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="proyectos" class="container container--blanco --column negro">
+            <h2 class="section__title">Mis proyectos</h2>
+            <form class="seleccion__wrapper negro" action="">
+                <label for="tipoProyecto"> ¿Qué tipo de proyectos quieres ver?</label>
+
+                <select class="seleccion__input--select" name="tipoProyecto" id="tipoProyecto">
+                    <option class="seleccion__input--select-option" value="todo" selected>Todo</option>
+                    <option class="seleccion__input--select-option" value="programación">Programación</option>
+                    <option class="seleccion__input--select-option" value="front end">Front End</option>
+                    <option class="seleccion__input--select-option" value="back end">Back End</option>
+                </select>
+            </form>
+
+            <div class="card__container --justify-center --align-center"></div>
+
+            </div>
+        </section>
+
+        <section id="contacto" class="container">
+            <h2 class="section__title">Pregunta lo que quieras</h2>
+            <div class="wrapper--column">
+                <div class="datos-contacto">
+                    <span>Correo electrónico</span><p>javierdlt45@gmail.com</p>
+                    <span>Teléfono de contácto</span><p>+34 640 56 37 46</p>
+                    <span>Horario </span><p>Lunes - Viernes: 8 am - 15 pm</p>
+                </div>
+                <button class="abrir-btn" onclick="abrirSidePanel()">Contactar</button>
+            </div>
+            <div id="sidePanel" class="side-panel">   
+                <form action="#" class="form__wrapper">
+                    <div class="form__input--fila">
+                        <label for="nombre">
+                           Nombre
+                        </label>
+                        <input name="nombre" type="text" class="form__input" data-text="Nombre" required
+                            placeholder="// Introduce tu nombre">
+                    </div>
+                    <div class="form__input--fila">
+                        <label for="apellidos">
+                            Apellidos
+                        </label>
+                        <input name="apellidos" type="text" class="form__input" data-text="Apellidos" required
+                            placeholder="// Introduce tus apellidos">
+                    </div>
+                    <div class="form__input--fila">
+                        <label for="email">
+                            Correo electrónico
+                        </label>
+                        <input name="email" type="email" class="form__input" data-text="Correo electrónico"
+                            required placeholder="// Introduce un correo electrónico">
+                    </div>
+                    <div class="form__input--fila">
+                        <label for="telefono">
+                            Teléfono de contacto
+                        </label>
+                        <input name="telefono" type="tel" class="form__input" data-text="Teléfono" required
+                            placeholder="Introduce un teléfono">
+                    </div>
+                    <div class="form__input--fila">
+                        <label for="consulta">
+                            Consulta
+                        </label>
+                        <textarea name="consulta" id="contact-consulta" class="form__input" data-text="consulta"
+                            placeholder="//En que puedo ayudarte"></textarea>
+                    </div>
+                </form>
+                <button id="enviar" class="button enviar">
+                    <span>Enviar</span>
+                </button>
+                <a href="javascript:void(0)" class="cerrar-btn" onclick="cerrarSidePanel()">&times;</a>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer__1">
+                <a href="#contacto">hablemos</a><span><i class="fa-solid fa-message"></i></span>
+            </div>
+            <div class="footer__2">
+                <img src="./src/media/logo/JTA-logo.png" width="25%" alt="logo">
+                <h4>Javier de la Torre</h4>
+                <p>Web Developer</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./src/js/main.js"></script>
+</body>
+
+</html>
