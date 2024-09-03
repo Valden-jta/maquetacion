@@ -39,7 +39,7 @@ let proyectos = [
   {
     nombre: "Codenotch",
     año: 2024,
-    url: "https://github.com/Valden-jta/maquetacion/tree/main/codenocht_web",
+    url: "https://github.com/Valden-jta/maquetacion/tree/main/dia2/codenocht_web",
     categoria: ["práctica", "front end"],
     descripcion: "Replica de la web de Codenotch.",
     tags: ["flexbox", "JS vanilla"],
@@ -52,7 +52,7 @@ let proyectos = [
   {
     nombre: "Galería",
     año: 2024,
-    url: "https://github.com/Valden-jta/maquetacion/tree/main/maquetacion_basica",
+    url: "https://github.com/Valden-jta/retosEvaluables/tree/main/modulo2/Tema1",
     categoria: ["práctica", "front end"],
     descripcion: "Galería y Blog básico.",
     tags: ["flexbox", "responsive"],
@@ -92,6 +92,15 @@ let proyectos = [
       "../imagenes/tresEnRaya/tres_en_raya3.png",
     ],
   },
+  {
+    nombre: "tienda online",
+    año: 2024,
+    url: "https://github.com/Valden-jta/maquetacion/tree/main/dia7",
+    categoria: ["práctica", "front end"],
+    descripcion: "Maquetación de tienda online.",
+    tags: ["bootstrap", "jquery"],
+    imagenes: ["../imagenes/tiendaOnline/tienda_online_1.png"],
+  },
 ];
 
 console.log("Lista de proyectos", proyectos);
@@ -118,18 +127,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function comprobarAncho() {
     if (window.innerWidth <= wideScreen) {
-      mobileMenuIcon.style.display = 'block';
+      mobileMenuIcon.style.display = "block";
     } else {
-      mobileMenuIcon.style.display = 'none';
+      mobileMenuIcon.style.display = "none";
     }
     console.log(window.innerWidth);
   }
 
   function desplegarMenu() {
-    mobileMenuIcon.addEventListener('click', ()=>{
+    mobileMenuIcon.addEventListener("click", () => {
       mobileMenuTabs.classList.toggle("desplegado");
     });
-
   }
   comprobarAncho();
   window.addEventListener("resize", comprobarAncho);
@@ -140,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // * -------------- SobreMi --------------
 //! animar el retrato y mostrar las demas secciones
 let retrato = document.querySelector(".about__picture");
-let cta = document.querySelector('.about__picture-cta');
+let cta = document.querySelector(".about__picture-cta");
 let seccion = document.querySelector(".about__content");
 let conoceme = document.querySelector(".section__title");
 
@@ -148,7 +156,7 @@ retrato.addEventListener("click", () => {
   retrato.classList.add("animacion-retrato");
   seccion.classList.add("animacion-contenido");
   seccion.classList.add("visible");
-  cta.style.opacity = '0';
+  cta.style.opacity = "0";
 });
 
 //! TIMELINE
@@ -257,11 +265,10 @@ function filtrarProyectos(proyectos) {
   console.log(proyectosFiltrados);
 }
 
-
 function renderizarCard(proyectos) {
   let cardContainer = document.querySelector(".card__container");
   cardContainer.innerHTML = ""; // el div inicial está vacío
- 
+
   let practicaHTML = `<li class="card__icon-wrapper">
 <div class="card__icon" data-text="Práctica">
 <div class="filled"></div>
@@ -271,7 +278,7 @@ function renderizarCard(proyectos) {
 </div>
 <div class="card__icon-tooltip">Práctica</div>
 </li>`;
-let programacionHTML = `<li class="card__icon-wrapper">
+  let programacionHTML = `<li class="card__icon-wrapper">
 <div class="card__icon" data-text="Programación">
 <div class="filled"></div>
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
@@ -280,7 +287,7 @@ let programacionHTML = `<li class="card__icon-wrapper">
 </div>
 <div class="card__icon-tooltip">Programación</div>
 </li>`;
-let frontEndHTML = `<li class="card__icon-wrapper">
+  let frontEndHTML = `<li class="card__icon-wrapper">
 <div class="card__icon" data-text="Front end">
 <div class="filled"></div>
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
@@ -289,7 +296,7 @@ let frontEndHTML = `<li class="card__icon-wrapper">
 </div>
 <div class="card__icon-tooltip">Front end</div>
 </li>`;
-let backEndHTML = `<li class="card__icon-wrapper">
+  let backEndHTML = `<li class="card__icon-wrapper">
 <div class="card__icon" data-text="Back end">
 <div class="filled"></div>
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
@@ -300,36 +307,36 @@ let backEndHTML = `<li class="card__icon-wrapper">
 </li>`;
 
   proyectos.forEach((proyecto) => {
-     // render de la tarjeta
-    let card = document.createElement('div');
-    card.classList.add('card',);
+    // render de la tarjeta
+    let card = document.createElement("div");
+    card.classList.add("card");
 
-  // render contenedor de iconos (badges)
-  let badgeContainer = document.createElement('ul');
-  badgeContainer.classList.add('card__icon-container');
+    // render contenedor de iconos (badges)
+    let badgeContainer = document.createElement("ul");
+    badgeContainer.classList.add("card__icon-container");
 
-  // Generar badge según la categoría
-  proyecto.categoria.forEach((categoria) => {
-    let badge;
-    switch (categoria) {
-      case "práctica":
-        badge = practicaHTML;
-        break;
-      case "programación":
-        badge = programacionHTML;
-        break;
-      case "front end":
-        badge = frontEndHTML;
-        break;
-      case "back end":
-        badge = backEndHTML;
-        break;
-      default:
-        badge = '';
-        break;
-    }
-    badgeContainer.innerHTML += badge;
-  });
+    // Generar badge según la categoría
+    proyecto.categoria.forEach((categoria) => {
+      let badge;
+      switch (categoria) {
+        case "práctica":
+          badge = practicaHTML;
+          break;
+        case "programación":
+          badge = programacionHTML;
+          break;
+        case "front end":
+          badge = frontEndHTML;
+          break;
+        case "back end":
+          badge = backEndHTML;
+          break;
+        default:
+          badge = "";
+          break;
+      }
+      badgeContainer.innerHTML += badge;
+    });
 
     // Render de datos
     card.innerHTML += `
@@ -390,35 +397,35 @@ function imagenCarrusel(proyectos) {
 //! Side Panel
 
 abrirSidePanel = () => {
-  
   if (window.innerWidth > 850) {
     document.getElementById("sidePanel").style.left = "75%";
-    document.getElementById("sidePanel").style.boxShadow = "-7px -1px 32px 7px rgba(24, 13, 13, 0.75)";
-    console.log('abrir');
+    document.getElementById("sidePanel").style.boxShadow =
+      "-7px -1px 32px 7px rgba(24, 13, 13, 0.75)";
+    console.log("abrir");
   } else if (window.innerWidth <= 850 && window.innerWidth > 450) {
-    document.getElementById('sidePanel').style.left= "50%";
-    document.getElementById('sidePanel').style.boxShadow = "-7px -1px 32px 7px rgba(24, 13, 13, 0.75)";
-    console.log('abrir');
+    document.getElementById("sidePanel").style.left = "50%";
+    document.getElementById("sidePanel").style.boxShadow =
+      "-7px -1px 32px 7px rgba(24, 13, 13, 0.75)";
+    console.log("abrir");
   } else {
-    document.getElementById('sidePanel').style.width = '100%';
-    document.getElementById('sidePanel').style.boxShadow = "-7px -1px 32px 7px rgba(24, 13, 13, 0.75)";
-    document.getElementById('sidePanel').style.left = '0';
-    console.log('abrir');
+    document.getElementById("sidePanel").style.width = "100%";
+    document.getElementById("sidePanel").style.boxShadow =
+      "-7px -1px 32px 7px rgba(24, 13, 13, 0.75)";
+    document.getElementById("sidePanel").style.left = "0";
+    console.log("abrir");
   }
-
-}
+};
 
 cerrarSidePanel = () => {
   document.getElementById("sidePanel").style.left = "100%";
-  document.getElementById('sidePanel').style.boxShadow = "";
-  console.log('cerrar');
-}
+  document.getElementById("sidePanel").style.boxShadow = "";
+  console.log("cerrar");
+};
 
 //! fecha copyright
 let date = new Date();
-document.getElementById('copyrightDate').innerHTML ='© ' + date.getFullYear();
-document.getElementById('copyrightDate').style.color = 'var(--negro-texto)';
-
+document.getElementById("copyrightDate").innerHTML = "© " + date.getFullYear();
+document.getElementById("copyrightDate").style.color = "var(--negro-texto)";
 
 //* LlAMADAS A LAS FUNCIONES --------------------------------------------------------------
 
