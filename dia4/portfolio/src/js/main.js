@@ -118,25 +118,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function comprobarAncho() {
     if (window.innerWidth <= wideScreen) {
-      mobileMenuIcon.classList.add("visible");
+      mobileMenuIcon.style.display = 'block';
     } else {
-      mobileMenuIcon.classList.remove("visible");
+      mobileMenuIcon.style.display = 'none';
     }
     console.log(window.innerWidth);
   }
 
   function desplegarMenu() {
-    if (window.innerWidth <= wideScreen) {
-      if (mobileMenuIcon.classList.contains("fa-bars")) {
-        mobileMenuIcon.classList.replace("fa-bars", "fa-x");
-        mobileMenuIcon.style.cssText = "color: var(--amarillo);";
-        mobileMenuTabs.classList.toggle("desplegado");
-      } else {
-        mobileMenuIcon.classList.replace("fa-x", "fa-bars");
-        mobileMenuIcon.style.cssText = "color: var(--blanco);";
-        mobileMenuTabs.classList.toggle("desplegado");
-      }
-    }
+    mobileMenuIcon.addEventListener('click', ()=>{
+      mobileMenuTabs.classList.toggle("desplegado");
+    });
+
   }
   comprobarAncho();
   window.addEventListener("resize", comprobarAncho);
@@ -395,16 +388,34 @@ function imagenCarrusel(proyectos) {
 //! Side Panel
 
 abrirSidePanel = () => {
-  document.getElementById("sidePanel").style.left = "75%";
-  console.log('abrir');
   
+  if (window.innerWidth > 850) {
+    document.getElementById("sidePanel").style.left = "75%";
+    document.getElementById("sidePanel").style.boxShadow = "-7px -1px 32px 7px rgba(24, 13, 13, 0.75)";
+    console.log('abrir');
+  } else if (window.innerWidth <= 850 && window.innerWidth > 450) {
+    document.getElementById('sidePanel').style.left= "50%";
+    document.getElementById('sidePanel').style.boxShadow = "-7px -1px 32px 7px rgba(24, 13, 13, 0.75)";
+    console.log('abrir');
+  } else {
+    document.getElementById('sidePanel').style.width = '100%';
+    document.getElementById('sidePanel').style.boxShadow = "-7px -1px 32px 7px rgba(24, 13, 13, 0.75)";
+    document.getElementById('sidePanel').style.left = '0';
+    console.log('abrir');
+  }
+
 }
 
 cerrarSidePanel = () => {
   document.getElementById("sidePanel").style.left = "100%";
+  document.getElementById('sidePanel').style.boxShadow = "";
   console.log('cerrar');
-  
 }
+
+//! fecha copyright
+let date = new Date();
+document.getElementById('copyrightDate').innerHTML ='© ' + date.getFullYear();
+document.getElementById('copyrightDate').style.color = 'var(--negro-texto)';
 
 
 //* LlAMADAS A LAS FUNCIONES --------------------------------------------------------------
