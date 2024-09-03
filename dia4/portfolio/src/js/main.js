@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // * -------------- SobreMi --------------
 //! animar el retrato y mostrar las demas secciones
 let retrato = document.querySelector(".about__picture");
+let cta = document.querySelector('.about__picture-cta');
 let seccion = document.querySelector(".about__content");
 let conoceme = document.querySelector(".section__title");
 
@@ -147,6 +148,7 @@ retrato.addEventListener("click", () => {
   retrato.classList.add("animacion-retrato");
   seccion.classList.add("animacion-contenido");
   seccion.classList.add("visible");
+  cta.style.opacity = '0';
 });
 
 //! TIMELINE

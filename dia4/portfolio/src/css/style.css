@@ -596,6 +596,15 @@ h6 {
   max-width: 40%;
   border-radius: 100%;
   box-shadow: 32px 32px 51px #1f1e26, -32px -32px 51px #535064;
+  transition: opacity 0.5s ease;
+}
+
+.about__picture-cta {
+  color:var(--highlight);
+  position: absolute;
+  left:63%;
+  top: 60%;
+  animation: pulso 0.5s infinite both; 
 }
 
 /* contenido */
@@ -1761,6 +1770,11 @@ textarea.form__input {
     padding: 0 2rem;
   }
 
+  .about__picture-cta {
+    left:60%;
+    top:55%;
+  }
+
   .timeLine__wrapper {
     left: 3%;
   }
@@ -1848,6 +1862,12 @@ textarea.form__input {
     align-items: center;
   }
 
+  .about__picture-cta {
+    left:55%;
+    top:50%;
+  }
+
+
   .timeLine__wrapper {
     left: 0%;
   }
@@ -1880,6 +1900,10 @@ textarea.form__input {
   }
   /*? -------------  Proyectos ------------- */
   /* listo con el de tablet */
+  .seleccion__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
   /*? -------------  contacto ------------- */
   /* desplazamiento de side-panel controlado en main.js */
