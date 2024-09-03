@@ -1,3 +1,3 @@
 ## Día 4
 
-- Portfolio: en proceso
+- Portfolio: completo
