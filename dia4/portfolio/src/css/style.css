@@ -1767,6 +1767,7 @@ textarea.form__input {
 
   #sobreMi {
     padding: 0 2rem;
+    z-index: 9;
   }
 
   .about__picture-cta {
@@ -1786,6 +1787,7 @@ textarea.form__input {
 
   #proyectos {
     padding: 3rem 1rem;
+    z-index: 99;
   }
 
   .seleccion__wrapper {
